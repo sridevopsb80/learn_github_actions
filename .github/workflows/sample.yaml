@@ -1,0 +1,12 @@
+##[] denotes a list so multiple values can be run such as push[0]
+#To enable a workflow to be triggered manually, you need to configure the workflow_dispatch event.  -https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows#workflow_dispatch
+
+name: learn-github-actions
+#run-name: ${{ github.actor }} is learning GitHub Actions
+on: [push, workflow_dispatch]
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo Hello

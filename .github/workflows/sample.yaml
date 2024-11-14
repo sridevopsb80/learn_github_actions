@@ -5,8 +5,19 @@ name: learn-github-actions
 #run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push, workflow_dispatch]
 jobs:
-  check-bats-version:
+  DEV:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - run: echo Hello
+  QA:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo Hello
+  UAT:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo Hello
+  PROD:
+    runs-on: ubuntu-latest
+    steps:
       - run: echo Hello

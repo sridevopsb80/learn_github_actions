@@ -1,4 +1,4 @@
-##[] denotes a list so multiple values can be run such as push[0]
+##on: [] denotes a list so multiple values can be run such as push[0]
 #To enable a workflow to be triggered manually, you need to configure the workflow_dispatch event.  -https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows#workflow_dispatch
 #by default, jobs will run in parallel, which is not desired while setting up a dev-qa-uat-prod structure. to run jobs sequentially, use job needs.
 #https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/using-jobs-in-a-workflow

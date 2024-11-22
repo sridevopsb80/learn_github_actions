@@ -1,4 +1,3 @@
-##on: [] - [] denotes a list so multiple values can be run such as push[0]
 
 #To enable a workflow to be triggered manually, you need to configure the workflow_dispatch event.  -https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows#workflow_dispatch
 
@@ -7,26 +6,26 @@
 #https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#jobsjob_idneeds
 
 name: learn-github-actions
-on: [push, workflow_dispatch]
+on: [push, workflow_dispatch] #[] denotes a list so multiple values can be run such as push[0]
 jobs:
   DEV:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest #github provides its own runner (running on ubuntu)
     steps:
       - run: echo Hello
   QA:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest #github provides its own runner (running on ubuntu)
     needs:
       - DEV
     steps:
       - run: echo Hello
   UAT:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest #github provides its own runner (running on ubuntu)
     needs:
       - QA
     steps:
       - run: echo Hello
   PROD:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest #github provides its own runner (running on ubuntu)
     needs:
       - UAT
     steps:

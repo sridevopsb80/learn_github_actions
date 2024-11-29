@@ -14,19 +14,19 @@ jobs:
       - run: echo Hello
   QA:
     runs-on: ubuntu-latest #github provides its own runner (running on ubuntu)
-    needs:
+    needs: #to setup sequential execution. will run after provided value
       - DEV
     steps:
       - run: echo Hello
   UAT:
     runs-on: ubuntu-latest #github provides its own runner (running on ubuntu)
-    needs:
+    needs: #to setup sequential execution. will run after provided value
       - QA
     steps:
       - run: echo Hello
   PROD:
     runs-on: ubuntu-latest #github provides its own runner (running on ubuntu)
-    needs:
+    needs: #to setup sequential execution. will run after provided value
       - UAT
     steps:
       - run: echo Hello

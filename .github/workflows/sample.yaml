@@ -6,7 +6,7 @@
 #https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#jobsjob_idneeds
 
 name: learn-github-actions
-on: [push, workflow_dispatch] #[] denotes a list so multiple values can be run such as push[0]
+on: [workflow_dispatch] #[] denotes a list so multiple values can be run such as push[0]
 jobs:
   DEV:
     runs-on: ubuntu-latest #github provides its own runner (running on ubuntu)

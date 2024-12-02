@@ -24,3 +24,5 @@ By default, jobs will run in parallel, which is not desired while setting up a d
 https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/using-jobs-in-a-workflow
 https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#jobsjob_idneeds
 ````
+## Vault documentation
+http://github.com/hashicorp/vault-action

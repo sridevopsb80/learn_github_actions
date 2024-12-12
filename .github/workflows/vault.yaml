@@ -16,3 +16,5 @@ jobs:
           secrets: |
             kv/data/test MYPASS | mypass ;
       - run: env
+
+        #vault_token is defined in github. https://github.com/organizations/sridevopsb80/settings/secrets/actions
